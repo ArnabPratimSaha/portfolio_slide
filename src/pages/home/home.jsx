@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import Navbar from '../../components/navbar/navbar'
+import React,{useState} from 'react';
+import Navbar from '../../components/navbar/navbar';
 import Intro from '../../components/intro/intro'
 import Sidebar from '../../components/sidebar/sidebar'
 import './home.css';
