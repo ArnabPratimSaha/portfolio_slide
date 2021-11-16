@@ -1,0 +1,97 @@
+.intro-fulldiv
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse
+}
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+.intro-namediv
+{
+    max-width: 100%;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10rem;
+    font-size: 2rem;
+}
+.intro-namediv h1,.intro-namediv span
+{
+    margin: 0;
+    padding: 0;
+}
+.intro-namediv span
+{
+    font-family: 'Nova Mono', monospace;
+    position: relative;
+}
+.intro-namediv span::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    z-index: 3;
+    animation: cursor-anim 10s steps(32,end) none,blink 800ms ease-in-out none 12;
+    opacity: 0;
+}
+.intro-namediv span::after
+{
+    background-color:#fff;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    animation-name: name-anim;
+    animation-timing-function: steps(32,end);
+    animation-duration: 10s;
+    animation-delay: none;
+}
+@keyframes name-anim {
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes cursor-anim {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.intro-picdiv
+{
+    max-width: 100%;
+    width: 30rem;
+    background-color: burlywood;
+}
+@media only screen and (max-width: 900px) {
+    .intro-namediv
+    {
+        font-size: .9rem;
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 1rem;
+    }
+}

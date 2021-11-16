@@ -1,0 +1,30 @@
+.navbar-fulldiv
+{
+    position: fixed;
+    background-color: aqua;
+    display: flex;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.navbar-leftdiv
+{
+    margin-left: 3rem;
+}
+.navbar-rightdiv
+{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+.navbar-rightdiv div
+{
+    position: relative;
+    height: 100%;
+    font-weight: 500;
+    width: 33%;
+    transition: top 800ms ease-in-out;
+    transform: translateY(-50%);
+}
