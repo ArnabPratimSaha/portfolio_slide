@@ -1,5 +1,6 @@
 import React from 'react'
 import './intro.css';
+import pic from '../../images/profile.png';
 function Intro(props) {
     return (
         <div className='intro-fulldiv'>
@@ -8,7 +9,9 @@ function Intro(props) {
                 <span>I am a full stack web developer.</span>
             </div>
             <div className='intro-picdiv'>
-
+                <div className='intro-picdiv__inner-div'>
+                    <img className='intro-profile-pic' src={pic}/>
+                </div>
             </div>
         </div>
     )

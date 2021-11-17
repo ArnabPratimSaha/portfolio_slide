@@ -1,22 +1,23 @@
 .intro-fulldiv
 {
     height: 100vh;
-    width: 100vw;
+    min-height: 40rem;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap-reverse
+    flex-wrap: wrap-reverse;
 }
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 .intro-namediv
 {
     max-width: 100%;
-    width: 40rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 10rem;
     font-size: 2rem;
+    box-sizing: border-box;
 }
 .intro-namediv h1,.intro-namediv span
 {
@@ -55,6 +56,7 @@
     animation-duration: 10s;
     animation-delay: none;
 }
+
 @keyframes name-anim {
     0%{
         transform: scaleX(1);
@@ -83,7 +85,27 @@
 {
     max-width: 100%;
     width: 30rem;
-    background-color: burlywood;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-picdiv__inner-div
+{
+    height: 30rem;
+    width: 25rem;
+    border: 1px solid transparent;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    background-color: #ff3c00;
+    overflow: hidden;
+}
+.intro-picdiv__inner-div img
+{
+    height: 30rem;
+    width: 25rem;
 }
 @media only screen and (max-width: 900px) {
     .intro-namediv
