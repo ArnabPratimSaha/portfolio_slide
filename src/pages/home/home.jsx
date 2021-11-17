@@ -9,7 +9,7 @@ function Home() {
     const [navbarFocus, setNavbarFocus] = useState(true);
     useEffect(() => {
         window.addEventListener('scroll',() => {
-            if (window.scrollY > window.innerHeight) {
+            if (window.scrollY > 200) {
                 setNavbarFocus(false);
             }
             else {
