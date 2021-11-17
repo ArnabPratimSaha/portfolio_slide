@@ -1,12 +1,14 @@
 .navbar-fulldiv
 {
     position: fixed;
-    background-color: aqua;
     display: flex;
     width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
     justify-content: space-between;
-    padding: 1rem 0;
+    height: 4rem;
+    z-index: 1000;
+    align-items: center;
+    transition: all 300ms ease-in-out;
 }
 .navbar-leftdiv
 {
@@ -16,15 +18,42 @@
 {
     width: 20%;
     display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.navbar-rightdiv__links
+{
+    display: flex;
     justify-content: space-between;
     margin-right: 3rem;
+    align-items: center;
+
 }
-.navbar-rightdiv div
+.navbar-rightdiv__links a
 {
     position: relative;
-    height: 100%;
-    font-weight: 500;
-    width: 33%;
-    transition: top 800ms ease-in-out;
-    transform: translateY(-50%);
+    transition: all 400ms ease-in-out;
+}
+.navbar-rightdiv__bar
+{
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    background-color: #00bfff;
+    bottom: 0;
+    transform-origin: left;
+    transition: transform ease-in-out 200ms;
+    animation: fadein 3s ease-in-out none 1;
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+    }
 }
