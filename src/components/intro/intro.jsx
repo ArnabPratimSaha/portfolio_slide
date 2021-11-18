@@ -7,7 +7,7 @@ function Intro(props) {
             <div className='intro-namediv'>
                 <div className='intro-namediv-intro'>
                     <h1 style={{marginRight:'10px',color:'#ff3c00'}}>HI!</h1>
-                    <h1>I am Arnab.</h1>
+                    <h1>{`I am Arnab.${props.number}`}</h1>
                 </div>
                 <span>I am a full stack web developer.</span>
             </div>
