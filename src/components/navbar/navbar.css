@@ -14,6 +14,15 @@
 {
     margin-left: 3rem;
 }
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+.navbar-leftdiv a
+{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #ff3c00;
+}
 .navbar-rightdiv
 {
     width: 20%;
@@ -33,6 +42,7 @@
 {
     position: relative;
     transition: all 400ms ease-in-out;
+    cursor: pointer;
 }
 .navbar-rightdiv__bar
 {
@@ -55,5 +65,23 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .navbar-rightdiv
+    {
+        width: 50%;
+    }
+    .navbar-rightdiv__links a
+    {
+        font-size: .8rem;
+    }
+    .navbar-leftdiv
+    {
+        margin-left: 1rem;
+    }
+    .navbar-rightdiv__links
+    {
+        margin-right: 1rem;
     }
 }
