@@ -1,0 +1,33 @@
+.textanim-fulldiv
+{
+    position: relative;
+    width: auto;
+    overflow: hidden;
+}
+.textanim-content-div
+{
+    position: relative;
+    transition: transform 300ms ease-in-out;
+}
+.textanim-span
+{
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 0;
+    background-color: #00bfff;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+@keyframes span-anim {
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
