@@ -1,0 +1,4 @@
+.zoom-anim-fulldiv 
+{
+    transition: transform ease-in-out 300ms;
+}

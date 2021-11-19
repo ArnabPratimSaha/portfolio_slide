@@ -1,7 +1,16 @@
 .intro-fulldiv
 {
     height: 100vh;
-    /* min-height: 40rem; */
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transition: transform 400ms ease-in-out;
+    background-color: #fff;
+}
+.intro-layer
+{
+    height: 100vh;
+    position: relative;
     width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -69,7 +78,21 @@
     animation-duration: 10s;
     animation-delay: none;
 }
-
+.intro-namediv-page-info
+{
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+.intro-namediv-page-info h2
+{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+    font-family: 'Oswald', sans-serif;
+    color: #444;
+    font-size: 3rem;
+    font-weight: 700;
+}
 @keyframes name-anim {
     0%{
         transform: scaleX(1);
@@ -96,7 +119,7 @@
 }
 .intro-picdiv
 {
-    max-width: 95%;
+    max-width: 90%;
     width: 30rem;
     overflow: hidden;
     display: flex;
@@ -106,8 +129,8 @@
 }
 .intro-picdiv__inner-div
 {
-    height: 30rem;
-    width: 25rem;
+    height: 25rem;
+    width: 20rem;
     border: 1px solid transparent;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -118,8 +141,8 @@
 }
 .intro-picdiv__inner-div img
 {
-    height: 30rem;
-    width: 25rem;
+    height: 25rem;
+    width: 20rem;
 }
 @media only screen and (max-width: 900px) {
     .intro-namediv
