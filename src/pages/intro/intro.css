@@ -82,16 +82,17 @@
 {
     
 }
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 .intro-namediv-page-info h2
 {
     margin: 0;
     padding: 0;
     letter-spacing: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
     color: #444;
-    font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
+    filter: drop-shadow(2px 2px 10px #cacaca);
 }
 @keyframes name-anim {
     0%{
@@ -168,5 +169,10 @@
     {
         height: 20rem;
         width: 15rem;
+    }
+    .intro-namediv-page-info h2
+    {
+        font-size: 3rem;
+        filter: drop-shadow(1px 1px 3px #cacaca);
     }
 }

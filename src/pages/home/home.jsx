@@ -17,7 +17,7 @@ function Home() {
     const dowtime = useRef(false);
     const firstTime = useRef(true);
     const slideInfo = useRef(new Array());
-    
+    const navbar = useRef()
     useEffect(() => {
         swipeDetect(window, (swipe) => {
             if (!dowtime.current) {
@@ -60,6 +60,8 @@ function Home() {
             firstTime.current = false;
             return;
         }
+        if(pageNumber===2|| pageNumber===4 || pageNumber===3)navbar.current.setMode('light');
+        else navbar.current.setMode('dark');
         if(pageNumber===1|| pageNumber===5)setIsRightDrawerVisible(true);
         else setIsRightDrawerVisible(false);
         if(pageNumber>prevPageNumber.current)
@@ -89,7 +91,7 @@ function Home() {
     return (
         <div className='home-fulldiv'>
             <Sidebar visible={isRightBarVisible} />
-            <Navbar index={pageNumber} options={['Intro','About Me','Hobby','Projects','Contact Me']}/>
+            <Navbar index={pageNumber} ref={navbar}  options={['Intro','About Me','Hobby','Projects','Contact Me']}/>
             <Intro number={pageNumber} id={'slide_01'} activePageNumber={pageNumber} pageNumber={1} zIndex={10}/>
             <AboutMe id={'slide_02'} activePageNumber={pageNumber} pageNumber={2} zIndex={20}/>
             <Hobby id={'slide_03'} activePageNumber={pageNumber} pageNumber={3} zIndex={30}/>
