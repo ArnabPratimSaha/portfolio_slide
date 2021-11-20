@@ -15,6 +15,7 @@ const TextAnim = forwardRef((props, ref) => {
             if(props.bar)
                 document.getElementById(`span_${props.id}`).style.animation = `span-anim 800ms linear none 1`;
         }, delay);
+        return delay;
     }
     const revAnim = (axis='X', direction='+') => {
         document.getElementById(props.id).style.transform = `translate${axis}(${direction === '+' ? '-' : '+'}100%)`;

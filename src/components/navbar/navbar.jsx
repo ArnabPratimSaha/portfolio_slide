@@ -1,9 +1,22 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef,forwardRef,useImperativeHandle } from 'react'
 import './navbar.css';
-function Navbar(props) {
+const MODES={
+    LIGHT:'light',
+    DARK:'dark'
+}
+
+const  Navbar=forwardRef((props,ref)=>{
     const [animationSets, setAnimationSets] = useState([null, ...new Array(props.options.length).fill(false)])
     const [index, setIndex] = useState(1);//number indicates the components such as intro is 0
     const divSize = useRef(new Array());
+    const [mode, setMode] = useState(MODES.DARK)
+    useImperativeHandle(
+        ref,
+        () => ({
+            setMode
+        }),
+        [],
+    )
     useEffect(() => {
         for (let i = 1; i <= animationSets.length - 1; i++) {
             setTimeout(() => {
@@ -36,12 +49,12 @@ function Navbar(props) {
             </div>
             <div className='navbar-rightdiv' id='div_01'>
                 <div className='navbar-rightdiv__links'>
-                    {props.options.map((o, i) => <a key={i} id={`link_0${i + 1}`} style={{ transform: animationSets[i + 1] ? 'translateY(0)' : 'translateY(-5rem)', color: index === i + 1 ? '#ff3c00' : '#222'}}>{o.toUpperCase()}</a>)}
+                    {props.options.map((o, i) => <a key={i} id={`link_0${i + 1}`} style={{ transform: animationSets[i + 1] ? 'translateY(0)' : 'translateY(-5rem)', color: index === i + 1 ? '#ff3c00' : mode===MODES.DARK ? '#222' : '#fff' }}>{o.toUpperCase()}</a>)}
                 </div>
                 <span id='bar_01' className='navbar-rightdiv__bar'></span>
             </div>
         </div>
     )
-}
+})
 
 export default Navbar;

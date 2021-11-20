@@ -28,27 +28,27 @@ function Intro(props) {
     return (
         <div className='intro-fulldiv' id={props.id} style={{ zIndex: props.zIndex }}>
                 <ZoomAnim id={uuid.current[2]} ref={zoomDiv_01}>
-                <div className='intro-layer'>
-                    <div className='intro-namediv'>
-                        <TextAnim className='intro-namediv-page-info' barColor={'#00bfff'} id={uuid.current[0]} axis={'X'} direction={'+'} ref={textCard_01} bar >
-                            <h2>01 INTRO</h2>
-                        </TextAnim>
-                        <TextAnim id={uuid.current[1]} axis={'Y'} direction={'+'} ref={textCard_02}>
-                            <div className='intro-namediv-intro'>
-                                <h1 style={{ marginRight: '10px', color: '#ff3c00' }}>HI!</h1>
-                                <h1>I am Arnab.</h1>
-                            </div>
-                        </TextAnim>
-                        <span>I am a full stack web developer.</span>
+                    <div className='intro-layer'>
+                        <div className='intro-namediv'>
+                            <TextAnim className='intro-namediv-page-info' barColor={'#00bfff'} id={uuid.current[0]} axis={'X'} direction={'+'} ref={textCard_01} bar >
+                                <h2>01 INTRO</h2>
+                            </TextAnim>
+                            <TextAnim id={uuid.current[1]} axis={'Y'} direction={'+'} ref={textCard_02}>
+                                <div className='intro-namediv-intro'>
+                                    <h1 style={{ marginRight: '10px', color: '#ff3c00' }}>HI!</h1>
+                                    <h1>I am Arnab.</h1>
+                                </div>
+                            </TextAnim>
+                            <span>I am a full stack web developer.</span>
+                        </div>
+                        <div className='intro-picdiv'>
+                            <ZoomAnim id={uuid.current[3]} ref={zoomDiv_02} scale={0.8}>
+                                <div className='intro-picdiv__inner-div'>
+                                    <img className='intro-profile-pic' src={pic} />
+                                </div>
+                            </ZoomAnim>
+                        </div>
                     </div>
-                    <div className='intro-picdiv'>
-                        <ZoomAnim id={uuid.current[3]} ref={zoomDiv_02} scale={0.8}>
-                            <div className='intro-picdiv__inner-div'>
-                                <img className='intro-profile-pic' src={pic} />
-                            </div>
-                        </ZoomAnim>
-                    </div>
-                </div>
                 </ZoomAnim>
             </div>
     )
