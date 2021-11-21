@@ -1,0 +1,101 @@
+@keyframes bulb-anim {
+    0%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    10%{
+        transform: translateY(-10%) rotateZ(20deg);
+    }
+    20%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    30%{
+        transform: translateY(-10%) rotateZ(-20deg);
+    }
+    40%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    50%{
+        transform: translateY(-10%) rotateZ(15deg);
+    }
+    60%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    70%{
+        transform: translateY(-10%) rotateZ(-15deg);
+    }
+    80%{
+        transform: translateY(-10%) rotateZ(5deg);
+    }
+    85%
+    {
+        transform: translateY(-10%) rotateZ(0);
+    }
+    90%{
+        transform: translateY(-10%) rotateZ(-5deg);
+    }
+    100%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+}
+@keyframes bulb-anim-2 {
+    0%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    33%{
+        transform: translateY(-10%) rotateZ(20deg);
+    }
+    66%{
+        transform: translateY(-10%) rotateZ(-20deg);
+    }
+    100%{
+        transform: translateY(-10%) rotateZ(0);
+    }  
+}
+@keyframes bulb-anim-5 {
+    0%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+    20%{
+        transform: translateY(-10%) rotateZ(20deg);
+    }
+    40%{
+        transform: translateY(-10%) rotateZ(-20deg);
+    }
+    60%{
+        transform: translateY(-10%) rotateZ(10deg);
+    }
+    80%{
+        transform: translateY(-10%) rotateZ(-10deg);
+    }
+    100%{
+        transform: translateY(-10%) rotateZ(0);
+    }
+}
+@keyframes bulb-anim-3 {
+    0%{
+        transform: translateY(0%) rotateZ(0);
+    }
+    33%{
+        transform: translateY(0%) rotateZ(20deg);
+    }
+    66%{
+        transform: translateY(0%) rotateZ(-20deg);
+    }
+    100%{
+        transform: translateY(0%) rotateZ(0);
+    }
+}
+@keyframes bulb-anim-4 {
+    0%{
+        transform: translateY(-20%) rotateZ(0);
+    }
+    33%{
+        transform: translateY(-20%) rotateZ(20deg);
+    }
+    66%{
+        transform: translateY(-20%) rotateZ(-20deg);
+    }
+    100%{
+        transform: translateY(-20%) rotateZ(0);
+    }
+}

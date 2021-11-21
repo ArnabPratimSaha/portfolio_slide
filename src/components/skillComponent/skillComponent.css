@@ -1,0 +1,122 @@
+.skill-fulldiv
+{
+    border: .1px solid transparent;
+    display: flex;
+    padding: 5px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #fff;
+    filter: drop-shadow(5px 5px 5px #afafaf);
+    margin: 1rem;
+}
+.skill-icondiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    filter: drop-shadow(4px 4px 2px #cacaca);
+}
+.skill-component-rightdiv
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.skill-component-textdiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.skill-component-textdiv__left
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.skill-component-textdiv__right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-component__text
+{
+    font-size: 1rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+.skill-component__experience
+{
+    margin: 0;
+    padding: 0;
+    font-size: .8rem;
+    font-family: 'Nunito', sans-serif;
+    color: #666;
+}
+.skill-component__percentage
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.skill-component-progressdiv
+{
+}
+.progress-bar
+{
+    height: 10px;
+    width: 20rem;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: 3px 3px 5px #666;
+}
+.progress-bar-bar
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(117deg, rgba(33,33,33,1) 0%, rgba(13,115,119,1) 50%, rgba(50,224,196,1) 100%);
+    transition: transform 400ms ease-in-out;
+}
+@media only screen and (max-width: 1200px) {
+    .skill-fulldiv
+    {
+        margin: 3px;
+        filter: drop-shadow(2px 2px 2px #afafaf);
+        padding-right: 10px;
+    }
+    .skill-icondiv
+    {
+        font-size: 1.8rem;
+    }
+    .skill-component__text
+    {
+        font-size: .9rem;
+    }
+    .skill-component__experience
+    {
+        font-size: .6rem;
+    }
+    .skill-component__percentage
+    {
+        font-size: .9rem;
+    }
+    .progress-bar
+    {
+        height: 5px;
+        width: 15rem;
+    }
+}

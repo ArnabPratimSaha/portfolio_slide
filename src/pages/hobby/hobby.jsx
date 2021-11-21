@@ -31,7 +31,7 @@ function Hobby(props) {
         }
         if (props.activePageNumber === props.pageNumber) {
             setTimeout(() => {
-                document.getElementById('hobby-flip').style.transform = `rotateZ(-${window.innerWidth > 900 ? 30 : 60}deg)`;
+                document.getElementById('hobby-flip').style.transform = `rotateZ(-${window.innerWidth > window.innerHeight ? 30 : 60}deg)`;
             }, 300);
         }
         else if (props.activePageNumber > props.pageNumber) {
@@ -44,28 +44,29 @@ function Hobby(props) {
     return (
         <div className='hobby-fulldiv' id={props.id} style={{zIndex:props.zIndex}}>
             <div className="hobby-flip" id={'hobby-flip'} ></div>
-            <ZoomAnim id={uuid.current[0]} ref={zoomDiv_01}>
-                <div className='hobby-layer'>
+            <ZoomAnim id={uuid.current[0]} className='hobby-zoomdiv' ref={zoomDiv_01}>
+                <div className='hobby-layer' >
                     <div className="hobby-top-div">
-                        <TextAnim className="hobby-movies" id={uuid.current[1]} axis={'Y'} direction={'-'} ref={textCard_01}>
+                        <TextAnim className='hobby-div-anim' contentClassName="hobby-movies" id={uuid.current[1]} axis={'Y'} direction={'-'} ref={textCard_01}>
                             <MdMovie className='hobby-icons'/>
                             <h1>MOVIES</h1>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                         </TextAnim>
-                        <TextAnim className="hobby-gaming" id={uuid.current[2]} axis={'Y'} direction={'-'} ref={textCard_02}>
+                        <TextAnim className='hobby-div-anim' contentClassName="hobby-gaming" id={uuid.current[2]} axis={'Y'} direction={'-'} ref={textCard_02}>
                             <BsController className='hobby-icons'/>
                             <h1>GAMES</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus commodi eaque hic corrupti eos nisi? Amet, dolori</p>
                         </TextAnim>
-                        <TextAnim className="hobby-helping-projects" id={uuid.current[3]} axis={'Y'} direction={'-'} ref={textCard_03}>
+                        <TextAnim className='hobby-div-anim' contentClassName="hobby-helping-projects" id={uuid.current[3]} axis={'Y'} direction={'-'} ref={textCard_03}>
                             <AiFillProject className='hobby-icons'/>
                             <h1>HELPING OTHER PROJECTS</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus commodi eaque hic corrupti eos nisi? Amet, doloribus.</p>
                         </TextAnim>
                     </div>
                     <div className="hobby-bottom-div">
-                        <TextAnim className='hobby-page-label' id={uuid.current[4]} axis={'X'} direction={'-'} ref={textCard_04}>
-                            <h2>03 HOBBY</h2>
+                        <TextAnim contentClassName='hobby-page-label' id={uuid.current[4]} axis={'X'} direction={'-'} ref={textCard_04}>
+                            <span>03</span>
+                            <h3>HOBBY</h3>
                         </TextAnim>
                     </div>
                 </div>
