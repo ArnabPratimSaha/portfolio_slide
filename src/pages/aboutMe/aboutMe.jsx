@@ -37,8 +37,8 @@ function AboutMe(props) {
     }, [props.activePageNumber])
     return (
         <div className='about-me-fulldiv' id={props.id} style={{zIndex:props.zIndex}}>
-            <div className='about-circle_01' id={`about-circle_01`} style={{ zIndex:-1,width:`${window.innerWidth}px`,height:`${window.innerWidth}px` }}></div>
-            <ZoomAnim id={uuid.current[0]} ref={zoomDiv_01}>
+            <div className='about-circle_01' id={`about-circle_01`} style={{ zIndex:-1, }}></div>
+            <ZoomAnim className='about-me-zoom-div' id={uuid.current[0]} ref={zoomDiv_01}>
                 <div className='about-me-layer'>
                     <div className="about-me-top-div">
                         <div className="about-me-info-div">
@@ -51,8 +51,9 @@ function AboutMe(props) {
                         </div>
                     </div>
                     <div className="about-me-bottom-div">
-                        <TextAnim className='about-me-page-info' id={uuid.current[1]} axis={'Y'} direction={'-'} ref={textCard_01}>
-                            <h2>02 ABOUT ME</h2>
+                        <TextAnim contentClassName='about-me-label' id={uuid.current[1]} axis={'Y'} direction={'-'} ref={textCard_01}>
+                            <h2>02</h2>
+                            <h3>ABOUT ME</h3>
                         </TextAnim>
                     </div>
                 </div>

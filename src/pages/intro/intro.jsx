@@ -16,22 +16,23 @@ function Intro(props) {
             textCard_01.current.anim('X', '+');
             textCard_02.current.anim('Y', '+', 300);
             zoomDiv_01.current.zoomIn();
-            zoomDiv_02.current.zoomIn('center',300);
+            // zoomDiv_02.current.zoomIn('center',300);
         }
         else {
             zoomDiv_01.current.zoomOut();
-            zoomDiv_02.current.zoomOut('center',.8);
+            // zoomDiv_02.current.zoomOut('center',.8);
             textCard_01.current.revAnim('X', '+');
             textCard_02.current.revAnim('Y', '+');
         }
     }, [props.activePageNumber])
     return (
         <div className='intro-fulldiv' id={props.id} style={{ zIndex: props.zIndex }}>
-                <ZoomAnim id={uuid.current[2]} ref={zoomDiv_01}>
+                <ZoomAnim className='intro-zoom-div' id={uuid.current[2]} ref={zoomDiv_01}>
                     <div className='intro-layer'>
                         <div className='intro-namediv'>
-                            <TextAnim className='intro-namediv-page-info' barColor={'#00bfff'} id={uuid.current[0]} axis={'X'} direction={'+'} ref={textCard_01} bar >
-                                <h2>01 INTRO</h2>
+                            <TextAnim contentClassName='intro-label' barColor={'#00bfff'} id={uuid.current[0]} axis={'X'} direction={'+'} ref={textCard_01} bar >
+                                <h2>01</h2>
+                                <h3>INTRO</h3>
                             </TextAnim>
                             <TextAnim id={uuid.current[1]} axis={'Y'} direction={'+'} ref={textCard_02}>
                                 <div className='intro-namediv-intro'>

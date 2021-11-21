@@ -19,6 +19,9 @@ function Home() {
     const slideInfo = useRef(new Array());
     const navbar = useRef()
     useEffect(() => {
+        window.addEventListener('drag',(e)=>{
+            e.preventDefault()
+        })
         swipeDetect(window, (swipe) => {
             if (!dowtime.current) {
                 dowtime.current = true;
@@ -60,11 +63,11 @@ function Home() {
             firstTime.current = false;
             return;
         }
-        if(pageNumber===2|| pageNumber===4 || pageNumber===3)navbar.current.setMode('light');
+        if (pageNumber === 2 || pageNumber === 4 || pageNumber === 3) navbar.current.setMode('light');
         else navbar.current.setMode('dark');
-        if(pageNumber===1|| pageNumber===5)setIsRightDrawerVisible(true);
+        if (pageNumber === 1 || pageNumber === 5) setIsRightDrawerVisible(true);
         else setIsRightDrawerVisible(false);
-        if(pageNumber>prevPageNumber.current)
+        if (pageNumber > prevPageNumber.current)
         {
             document.getElementById(`slide_${pageNumber<10?`0${pageNumber}`:pageNumber}`).style.transform=`translate(0,0)`;
         }

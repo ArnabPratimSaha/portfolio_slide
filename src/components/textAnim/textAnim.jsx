@@ -24,7 +24,7 @@ const TextAnim = forwardRef((props, ref) => {
     }
     return (
         <div className={`textanim-fulldiv ${props.className}`}>
-            <div className='textanim-content-div' id={props.id} style={{ transform: `translate${props.axis}(${props.direction === '+' ? '-' : '+'}100%)` }}>
+            <div className={`textanim-content-div ${props.contentClassName}`} id={props.id} style={{ transform: `translate${props.axis}(${props.direction === '+' ? '-' : '+'}100%)` }}>
                 {props.children}
             </div>
             {props.bar&&<div className='textanim-span' id={`span_${props.id}`} style={{ background: props.barColor ? props.barColor : '#00bfff' }}></div>}

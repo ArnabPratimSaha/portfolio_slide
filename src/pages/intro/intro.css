@@ -1,31 +1,35 @@
 .intro-fulldiv
 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 10;
     transition: transform 400ms ease-in-out;
     background-color: #fff;
 }
+.intro-zoom-div
+{
+    height: 100%;
+    width: 100%;
+}
 .intro-layer
 {
-    height: 100vh;
+    height: 100%;
     position: relative;
     width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 .intro-namediv
 {
-    max-width: 100%;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 10%;
     font-size: 2rem;
     box-sizing: border-box;
 }
@@ -78,21 +82,35 @@
     animation-duration: 10s;
     animation-delay: none;
 }
-.intro-namediv-page-info
+.intro-label
 {
-    
+    filter: drop-shadow(4px 4px 0px #cacaca);
+    display: flex;
+    align-items: flex-end;
 }
 
-.intro-namediv-page-info h2
+.intro-label h2
 {
-    margin: 0;
     padding: 0;
+    margin: 0;
     letter-spacing: 0;
+    height: 6rem;
+    line-height: 6rem;
     font-family: 'Roboto Slab', serif;
-    font-size: 4rem;
-    color: #444;
-    font-weight: 900;
-    filter: drop-shadow(2px 2px 10px #cacaca);
+    font-size: 6rem;
+    color: #222;
+    margin-right: 5px;
+    font-weight: 700;
+}
+.intro-label h3
+{
+    padding: 0;
+    margin: 0;
+    margin-right: 2rem;
+    font-size: 3rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: #555;
 }
 @keyframes name-anim {
     0%{
@@ -120,18 +138,16 @@
 }
 .intro-picdiv
 {
-    max-width: 90%;
-    width: 30rem;
+    min-width: 30rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10%;
 }
 .intro-picdiv__inner-div
 {
+    width: 30rem;
     height: 25rem;
-    width: 20rem;
     border: 1px solid transparent;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -145,34 +161,43 @@
     height: 25rem;
     width: 20rem;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .intro-namediv
     {
         font-size: .9rem;
         margin: 0;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         padding-top: 1rem;
     }
     .intro-picdiv
     {
         margin: 0;
-        margin-top: 4rem;
         align-self: center;
+        min-width: 20rem;
     }
     .intro-picdiv__inner-div
     {
-        height: 20rem;
         width: 20rem;
+        height: 15rem;
     }
     .intro-picdiv__inner-div img
     {
-        height: 20rem;
-        width: 15rem;
+        height: 15rem;
+        width: 10rem;
     }
-    .intro-namediv-page-info h2
+    .intro-label
     {
-        font-size: 3rem;
-        filter: drop-shadow(1px 1px 3px #cacaca);
+        filter: drop-shadow(2px 2px 0px #cacaca);
+    }
+    .intro-label h2
+    {
+        font-size: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+    .intro-label h3
+    {
+        font-size: 2rem;
     }
 }
