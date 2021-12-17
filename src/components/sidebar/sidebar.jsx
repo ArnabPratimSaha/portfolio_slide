@@ -51,13 +51,13 @@ function Sidebar(props) {
         <div className='sidebar-overlay'>
             <div className='icondiv'>
                 <div className='icondiv-icon__div' style={{ left: isFirstAnimationDone ? 0 : '10rem' }}>
-                    <AiFillLinkedin className='icondiv-icon' />
+                    <AiFillLinkedin className='icondiv-icon' onClick={()=>window.location='https://www.linkedin.com/in/arnab-pratim-saha-515942218/'} />
                 </div>
                 <div className='icondiv-icon__div' style={{ left: isSecAnimationDone ? 0 : '10rem' }}>
-                    <AiFillGithub className='icondiv-icon' />
+                    <AiFillGithub className='icondiv-icon' onClick={()=>window.location='https://github.com/ArnabPratimSaha'} />
                 </div>
                 <div className='icondiv-icon__div' style={{ left: isThirdAnimationDone ? 0 : '10rem' }}>
-                    <AiFillTwitterSquare className='icondiv-icon' />
+                    <AiFillTwitterSquare className='icondiv-icon' onClick={()=>window.location='https://twitter.com/ArnabPratimSaha'} />
                 </div>
             </div>
         </div>
