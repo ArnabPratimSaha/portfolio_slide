@@ -20,10 +20,13 @@
   align-items: center;
 }
 .project-layer-left-div {
-  width: 20rem;
-  height: 10rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .project-layer-right-div {
+  flex: 1;
+  align-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,8 +39,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(4rem, auto);
-  height: 30rem;
-  width: 30rem;
+  min-width: 12rem;
+  min-height: 12rem;
+  height: 60%;
+  width: 60%;
 }
 .vivi-fulldiv {
   background: #cacaca;
@@ -152,7 +157,7 @@
   line-height: 6rem;
   font-family: "Roboto Slab", serif;
   font-size: 6rem;
-  color: #FF5722;
+  color: #ff5722;
   margin-right: 5px;
   font-weight: 700;
 }
@@ -174,13 +179,11 @@
   .project-layer {
     padding-top: 2rem;
   }
-  .project-layer-left-div
-  {
-    width: 80%;
+  .project-layer-right-div {
   }
   .right-grid-div {
-    height: 20rem;
-    width: 80%;
+    height: 100%;
+    width: 90%;
   }
   .grid-card {
     margin: 3px;
@@ -198,5 +201,14 @@
   }
   .project-page-label h3 {
     font-size: 2rem;
+  }
+  .vivi-fulldiv h1 {
+    font-size: 1.5rem;
+  }
+  .vivi-fulldiv p {
+    font-size: 0.8rem;
+  }
+  .chatter-fulldiv span {
+    font-size: 0.8rem;
   }
 }

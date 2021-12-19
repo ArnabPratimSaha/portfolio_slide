@@ -1,8 +1,8 @@
 import React,{useRef,useEffect,useState} from 'react'
 import './hobby.css';
 import { v4 as uuidv4 } from 'uuid';
-import ZoomAnim from '../../components/zoomAnim/zoomAnim';
-import TextAnim from '../../components/textAnim/textAnim';
+import ZoomAnim from '../../../../components/zoomAnim/zoomAnim';
+import TextAnim from '../../../../components/textAnim/textAnim';
 
 import { BsController } from 'react-icons/bs';
 import { MdMovie } from 'react-icons/md';
@@ -50,17 +50,17 @@ function Hobby(props) {
                         <TextAnim className='hobby-div-anim' contentClassName="hobby-movies" id={uuid.current[1]} axis={'Y'} direction={'-'} ref={textCard_01}>
                             <MdMovie className='hobby-icons'/>
                             <h1>MOVIES</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p>I enjoy watching both movies and web-series.</p>
                         </TextAnim>
                         <TextAnim className='hobby-div-anim' contentClassName="hobby-gaming" id={uuid.current[2]} axis={'Y'} direction={'-'} ref={textCard_02}>
                             <BsController className='hobby-icons'/>
                             <h1>GAMES</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus commodi eaque hic corrupti eos nisi? Amet, dolori</p>
+                            <p>Other than movies and webseries i like to play both multiplayer and story-driven games.whenever i get free time.</p>
                         </TextAnim>
                         <TextAnim className='hobby-div-anim' contentClassName="hobby-helping-projects" id={uuid.current[3]} axis={'Y'} direction={'-'} ref={textCard_03}>
                             <AiFillProject className='hobby-icons'/>
                             <h1>HELPING OTHER PROJECTS</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis possimus commodi eaque hic corrupti eos nisi? Amet, doloribus.</p>
+                            <p>I like to help my friends and others in their project using html,css,javascript,react,node,react-native.</p>
                         </TextAnim>
                     </div>
                     <div className="hobby-bottom-div">

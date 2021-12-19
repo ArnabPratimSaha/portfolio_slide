@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../../components/navbar/navbar';
-import Intro from '../intro/intro'
 import Sidebar from '../../components/sidebar/sidebar';
 import Observer from '../../components/imtersectingObserver/observer';
 import './home.css';
-import AboutMe from '../aboutMe/aboutMe';
-import Hobby from '../hobby/hobby';
-import Projects from '../projects/projects';
-import ContactMe from '../contactme/contactMe';
+import Intro from './slides/intro/intro';
+import AboutMe from './slides/aboutMe/aboutMe';
+import Hobby from './slides/hobby/hobby';
+import Projects from './slides/projects/projects';
+import ContactMe from './slides/contactme/contactMe';
 import swipeDetect from 'swipe-detect';
 
 const maxPage = 5;

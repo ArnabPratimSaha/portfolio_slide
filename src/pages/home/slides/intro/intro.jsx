@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import './intro.css';
-import pic from '../../images/profile.png';
-import TextAnim from '../../components/textAnim/textAnim';
+import pic from '../../../../images/profile.png';
+import TextAnim from '../../../../components/textAnim/textAnim';
 import { v4 as uuidv4 } from 'uuid';
-import ZoomAnim from '../../components/zoomAnim/zoomAnim';
+import ZoomAnim from '../../../../components/zoomAnim/zoomAnim';
 function Intro(props) {
     const textCard_01 = useRef();
     const textCard_02 = useRef();

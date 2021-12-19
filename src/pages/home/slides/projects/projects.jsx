@@ -2,43 +2,40 @@ import React, { useRef, useEffect, useState } from 'react'
 import './projectAnimation.css';
 import './projects.css';
 import { v4 as uuidv4 } from 'uuid';
-import ZoomAnim from '../../components/zoomAnim/zoomAnim';
-import TextAnim from '../../components/textAnim/textAnim';
-import Bulb from '../../components/bulb/bulb';
-import ExpoAnim from '../../components/expoAnim/expoAnim';
+import TextAnim from '../../../../components/textAnim/textAnim';
+import Bulb from '../../../../components/bulb/bulb';
 
-import website_01 from './images/website.png'
 
 function Projects(props) {
     const textCard_01 = useRef();
     const textCard_02 = useRef();
     const textCard_03 = useRef();
     const textCard_04 = useRef();
-    const uuid = useRef([uuidv4(), uuidv4(), uuidv4(), uuidv4(), uuidv4()]);
+    const textCard_05 = useRef();
+    const uuid = useRef([uuidv4(), uuidv4(), uuidv4(), uuidv4(), uuidv4(), uuidv4()]);
     const [card_01, setCard_01] = useState(false);
     const downtime = useRef(false);
     useEffect(() => {
         if (props.activePageNumber === props.pageNumber) {
-            textCard_03.current.anim('Y', '+',textCard_02.current.anim('Y', '-',textCard_01.current.anim('X', '+',300)+200)+100);
-            textCard_04.current.anim('X', '-',300);
+            textCard_03.current.anim('Y', '+', textCard_02.current.anim('Y', '-', textCard_01.current.anim('X', '+', textCard_05.current.anim('X', '-', 500) + 200) + 200) + 100);
+            textCard_04.current.anim('X', '-', 300);
             setTimeout(() => {
                 setCard_01(true);
                 document.getElementById('bulb_01').style.transform = `translateY(-10%) rotateZ(0)`;
                 document.getElementById('bulb_02').style.transform = `translateY(0) rotateZ(0)`;
                 document.getElementById('bulb_03').style.transform = `translateY(-20%) rotateZ(0)`;
                 bulbAnimation();
-                // document.getElementById('vivi-image').style.animation='image-anim-01 10s linear 2s infinite';
             }, 300);
         }
         else {
             textCard_01.current.revAnim('X', '+');
+            textCard_05.current.revAnim('X', '-');
             textCard_02.current.revAnim('Y', '-');
             textCard_03.current.revAnim('Y', '+');
             textCard_04.current.revAnim('X', '-');
             document.getElementById('bulb_01').style.transform = `translateY(-100%) rotateZ(0)`;
             document.getElementById('bulb_02').style.transform = `translateY(-100%) rotateZ(0)`;
             document.getElementById('bulb_03').style.transform = `translateY(-100%) rotateZ(0)`;
-            // document.getElementById('vivi-image').style.animation='none';
             setCard_01(false);
         }
     }, [props.activePageNumber]);
@@ -71,14 +68,13 @@ function Projects(props) {
                 </div>
                 <div className="project-layer-right-div">
                     <div className="right-grid-div">
-                        <ExpoAnim axis='X' direction='-' className='grid-card grid-card-01' state={card_01} coverClassName='cover-01'>
-                            {/* <img className="vivi-image" id='vivi-image' src={website_01}></img> */}
-                            <div className="vivi-fulldiv">
+                        <div onClick={() => window.location = 'https://github.com/ArnabPratimSaha/Chatapplication_frontend'} className='grid-card grid-card-01'>
+                            <TextAnim className="projects-text-anim" contentClassName=" projects-text-anim-content vivi-fulldiv" id={uuid.current[4]} axis={'X'} direction={'-'} ref={textCard_05}>
                                 <h1>VIVI</h1>
                                 <p>a discord bot to handle messages.</p>
-                            </div>
-                        </ExpoAnim>
-                        <div className='grid-card grid-card-02'>
+                            </TextAnim>
+                        </div>
+                        <div onClick={() => window.location = 'https://github.com/ArnabPratimSaha/Chatapplication_frontend'} className='grid-card grid-card-02'>
                             <TextAnim className='projects-text-anim' contentClassName=" projects-text-anim-content chatter-fulldiv" id={uuid.current[1]} axis={'X'} direction={'+'} ref={textCard_01}>
                                 <span>C</span>
                                 <span>H</span>
@@ -94,7 +90,7 @@ function Projects(props) {
                                 <span>JUST MAIL IT</span>
                             </TextAnim>
                         </div>
-                        <div className='grid-card grid-card-04' >
+                        <div onClick={() => { window.location = 'https://github.com/ArnabPratimSaha/discordDetentionBot' }} className='grid-card grid-card-04' >
                             <TextAnim className='projects-text-anim' contentClassName=" projects-text-anim-content detention" id={uuid.current[3]} axis={'Y'} direction={'+'} ref={textCard_03}>
                                 <span>DETENTION</span>
                             </TextAnim>
