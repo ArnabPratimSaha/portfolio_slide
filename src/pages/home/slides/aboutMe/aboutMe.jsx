@@ -1,8 +1,11 @@
 import React,{useRef,useEffect,useState} from 'react'
 import './aboutMe.css';
 import { v4 as uuidv4 } from 'uuid';
-import ZoomAnim from '../../components/zoomAnim/zoomAnim';
-import TextAnim from '../../components/textAnim/textAnim';
+import ZoomAnim from '../../../../components/zoomAnim/zoomAnim';
+import TextAnim from '../../../../components/textAnim/textAnim';
+
+import { DiReact,DiNodejsSmall,DiMongodb } from 'react-icons/di';
+
 function AboutMe(props) {
     const textCard_01 = useRef();
     const textCard_02 = useRef();
@@ -45,8 +48,10 @@ function AboutMe(props) {
                             <TextAnim id={uuid.current[2]} axis={'X'} direction={'+'} ref={textCard_02}>
                                 <h1>I am Arnab Pratim Saha</h1>
                             </TextAnim>
-                            <TextAnim id={uuid.current[3]} axis={'Y'} direction={'+'} ref={textCard_03}>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque maxime quaerat, ut assumenda cum quae? Deserunt nemo eius dignissimos obcaecati quas hic quasi adipisci, sequi quo quibusdam alias mollitia.</p>
+                            <TextAnim contentClassName='about-me-description' id={uuid.current[3]} axis={'Y'} direction={'+'} ref={textCard_03}>
+                                <p>I am a junior Engineer currently pursuing B.TECH from Narula Institute Of Technology.I love building frontend websites as well as backend API using react<DiReact className='about-me-icons'/> node<DiNodejsSmall className='about-me-icons'/> mongo<DiMongodb className='about-me-icons'/> etc.
+                                    And wants to start machine learning.
+                                </p>
                             </TextAnim>
                         </div>
                     </div>

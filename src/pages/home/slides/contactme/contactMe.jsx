@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
 import './contactMe.css';
 import { v4 as uuidv4 } from 'uuid';
-import ZoomAnim from '../../components/zoomAnim/zoomAnim';
-import TextAnim from '../../components/textAnim/textAnim';
-import SkillComponent from '../../components/skillComponent/skillComponent';
+import ZoomAnim from '../../../../components/zoomAnim/zoomAnim';
+import TextAnim from '../../../../components/textAnim/textAnim';
+import SkillComponent from '../../../../components/skillComponent/skillComponent';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
 import { SiCplusplus, SiMongodb, SiAdobeillustrator } from 'react-icons/si';
