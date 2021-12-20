@@ -106,7 +106,11 @@
 }
 .bottom-div_links
 {
-    
+    margin-top: 2px;
+}
+.bottom-div_links__links
+{
+    margin: 0 5px;
 }
 @media only screen and (max-width: 1200px) {
     .contact-me-inner-div a

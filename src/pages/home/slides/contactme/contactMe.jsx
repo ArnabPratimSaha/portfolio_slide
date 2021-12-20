@@ -114,9 +114,9 @@ function ContactMe(props) {
                         <a href='#'>arnabpratimsaha@gmail.com</a>
                     </div>
                     <div className="bottom-div_links">
-                        <a className="bottom-div_links__links"><AiFillLinkedin /></a>
-                        <a className="bottom-div_links__links"><AiFillGithub /></a>
-                        <a className="bottom-div_links__links"><AiFillTwitterSquare /></a>
+                        <a className="bottom-div_links__links" href='https://www.linkedin.com/in/arnab-pratim-saha-515942218/'><AiFillLinkedin /></a>
+                        <a className="bottom-div_links__links" href='https://github.com/ArnabPratimSaha'><AiFillGithub /></a>
+                        <a className="bottom-div_links__links" href='https://twitter.com/ArnabPratimSaha'><AiFillTwitterSquare /></a>
                     </div>
                 </TextAnim>
             </div>
