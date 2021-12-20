@@ -55,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .contact-me-inner-div a
 {
@@ -102,6 +103,14 @@
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     color: #333;
+}
+.bottom-div_links
+{
+    margin-top: 2px;
+}
+.bottom-div_links__links
+{
+    margin: 0 5px;
 }
 @media only screen and (max-width: 1200px) {
     .contact-me-inner-div a

@@ -158,7 +158,7 @@
 }
 .intro-picdiv__inner-div img
 {
-    height: 25rem;
+    height: 30rem;
     width: 20rem;
 }
 @media only screen and (max-width: 1200px) {
@@ -179,12 +179,12 @@
     .intro-picdiv__inner-div
     {
         width: 20rem;
-        height: 15rem;
+        height: 20rem;
     }
     .intro-picdiv__inner-div img
     {
-        height: 15rem;
-        width: 10rem;
+        width: 17rem;
+        height: 25rem;
     }
     .intro-label
     {

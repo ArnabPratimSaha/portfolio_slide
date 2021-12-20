@@ -17,7 +17,7 @@ function Projects(props) {
     const downtime = useRef(false);
     useEffect(() => {
         if (props.activePageNumber === props.pageNumber) {
-            textCard_03.current.anim('Y', '+', textCard_02.current.anim('Y', '-', textCard_01.current.anim('X', '+', textCard_05.current.anim('X', '-', 500) + 200) + 200) + 100);
+            textCard_03.current.anim('Y', '+', textCard_02.current.anim('Y', '-', textCard_01.current.anim('X', '+', textCard_05.current.anim('X', '-', 300) + 200) + 200) + 100);
             textCard_04.current.anim('X', '-', 300);
             setTimeout(() => {
                 setCard_01(true);
@@ -68,7 +68,7 @@ function Projects(props) {
                 </div>
                 <div className="project-layer-right-div">
                     <div className="right-grid-div">
-                        <div onClick={() => window.location = 'https://github.com/ArnabPratimSaha/Chatapplication_frontend'} className='grid-card grid-card-01'>
+                        <div onClick={() => window.location = 'https://github.com/ArnabPratimSaha/project_alpha_frontend'} className='grid-card grid-card-01'>
                             <TextAnim className="projects-text-anim" contentClassName=" projects-text-anim-content vivi-fulldiv" id={uuid.current[4]} axis={'X'} direction={'-'} ref={textCard_05}>
                                 <h1>VIVI</h1>
                                 <p>a discord bot to handle messages.</p>
