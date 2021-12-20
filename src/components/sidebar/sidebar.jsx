@@ -8,20 +8,14 @@ function Sidebar(props) {
     const [isLeftDrawerVisible, setIsLeftDrawerVisible] = useState(props.visible)
     const [downtime, setDowntime] = useState(false);
     useEffect(() => {
-        if (downtime) {
-            // setTimeout(() => {
-            //     setIsLeftDrawerVisible(props.visible);
-            //     setDowntime(false);
-            // }, 1000);
-        }
-        else {
+        if(!downtime) {
             setDowntime(true);
             setIsLeftDrawerVisible(props.visible)
             setTimeout(() => {
                 setDowntime(false)
             }, 200);
         }
-    }, [props.visible])
+    }, [props.visible]);
     useEffect(() => {
         if (isLeftDrawerVisible) {
             setTimeout(() => {
@@ -29,7 +23,7 @@ function Sidebar(props) {
                 setTimeout(() => {
                     setIsSecAnimationDone(true);
                     setTimeout(() => {
-                        setIsThirdAnimationDone(true)
+                        setIsThirdAnimationDone(true);
                     }, 200);
                 }, 200);
             }, 200);

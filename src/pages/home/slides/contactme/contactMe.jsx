@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import ZoomAnim from '../../../../components/zoomAnim/zoomAnim';
 import TextAnim from '../../../../components/textAnim/textAnim';
 import SkillComponent from '../../../../components/skillComponent/skillComponent';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiFillLinkedin, AiFillGithub, AiFillTwitterSquare  } from 'react-icons/ai';
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
 import { SiCplusplus, SiMongodb, SiAdobeillustrator } from 'react-icons/si';
 import { DiReact, DiNodejsSmall } from 'react-icons/di';
@@ -104,13 +104,20 @@ function ContactMe(props) {
                     </div>
             {window.innerWidth>1200&&<div className="contact-me-page-label-wrapper">
                 <TextAnim contentClassName='contact-me-page-label' id={uuid.current[9]} axis={'Y'} direction={'-'} ref={textCard_10}>
-                    <span>03</span>
+                    <span>05</span>
                     <h3>CONTACT ME</h3>
                 </TextAnim>
             </div>}
                 </div>
                 <TextAnim className='contact-me-bottom-div' contentClassName='contact-me-inner-div' id={uuid.current[0]} axis={'Y'} direction={'-'} ref={textCard_01}>
-                    <a href='#'>arnabpratimsaha@gmail.com</a>
+                    <div className="bottom-div_gmail">
+                        <a href='#'>arnabpratimsaha@gmail.com</a>
+                    </div>
+                    <div className="bottom-div_links">
+                        <a className="bottom-div_links__links"><AiFillLinkedin /></a>
+                        <a className="bottom-div_links__links"><AiFillGithub /></a>
+                        <a className="bottom-div_links__links"><AiFillTwitterSquare /></a>
+                    </div>
                 </TextAnim>
             </div>
         </div>
